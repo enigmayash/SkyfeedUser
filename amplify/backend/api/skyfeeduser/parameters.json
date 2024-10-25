@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "skyfeeduser",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authskyfeeduserc090e877",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2024-10-25T21:23:22.460Z"
+}

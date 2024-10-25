@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "skyfeeduser",
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "AWS_IAM"
+    },
+    "conflictResolution": {},
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 365,
+        "apiKeyExpirationDate": "2025-10-25T21:23:02.478Z",
+        "keyDescription": "api key to sync skyfeed user and admin"
+      },
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authskyfeeduserc090e877"
+      },
+      {
+        "mode": "AWS_LAMBDA",
+        "lambdaFunction": "S3Triggerf7e8815c",
+        "ttlSeconds": "300"
+      }
+    ]
+  }
+}

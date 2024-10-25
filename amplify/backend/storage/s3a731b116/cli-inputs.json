@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3a731b116",
+  "policyUUID": "a731b116",
+  "bucketName": "skyfeeduser4e0e67d58c984597b6a37c9efbad47cd",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "READ"
+  ],
+  "triggerFunction": "S3Triggerf7e8815c",
+  "groupAccess": {}
+}
