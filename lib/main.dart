@@ -4,6 +4,7 @@ import 'package:amplify_flutter/amplify_flutter.dart';
 import 'package:amplify_storage_s3/amplify_storage_s3.dart';
 import 'package:go_router/go_router.dart';
 import 'package:skyfeeduser/home/screen/home_screen.dart';
+import 'package:skyfeeduser/home/screen/media_player_screen.dart';
 import 'authentication/SignInPage.dart';
 import 'authentication/SignUpPage.dart';
 import 'authentication/ConfirmSignUpPage.dart';
@@ -34,6 +35,13 @@ final GoRouter _router = GoRouter(
       builder: (context, state) {
         final username = state.uri.queryParameters['username'] ?? '';
         return ConfirmSignUpPage(username: username);
+      },
+    ),
+    GoRoute(
+      path: '/videoPlayer',
+      builder: (context, state) {
+        final videoUrl = state.extra as String; // Get the video URL from the extra parameter
+        return VideoPlayerScreen(videoUrl: videoUrl); // Pass the video URL to the VideoPlayerScreen
       },
     ),
     

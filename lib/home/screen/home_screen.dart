@@ -22,7 +22,8 @@ class HomePage extends StatelessWidget {
                   return Center(child: CircularProgressIndicator());
                 }
 
-                final isSignedIn = snapshot.hasData && snapshot.data!.isSignedIn;
+                final isSignedIn =
+                    snapshot.hasData && snapshot.data!.isSignedIn;
 
                 if (!isSignedIn) {
                   return Center(
@@ -64,10 +65,11 @@ class HomePage extends StatelessWidget {
                     final media = viewModel.mediaList[index];
                     return ListTile(
                       leading: Icon(Icons.video_library),
-                      title: Text(media.url), // Display URL or media name if available
+                      title: Text(
+                          media.url), // Display URL or media name if available
                       onTap: () {
-                        // Handle media item click (e.g., play video)
-                      },
+                        context.go('/videoPlayer', extra: media.url);
+                      }, // Handle media item click (e.g., play video)
                     );
                   },
                 );
