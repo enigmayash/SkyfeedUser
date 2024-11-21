@@ -5,7 +5,7 @@ class MediaModel {
 
   factory MediaModel.fromJson(Map<String, dynamic> json) {
     return MediaModel(
-      url: json['url'],  // Adjust key based on your API response
+      url: json['url'],  
     );
   }
 }

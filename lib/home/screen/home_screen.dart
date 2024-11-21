@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
                           media.url), // Display URL or media name if available
                       onTap: () {
                         context.go('/videoPlayer', extra: media.url);
-                      }, // Handle media item click (e.g., play video)
+                      }, 
                     );
                   },
                 );
